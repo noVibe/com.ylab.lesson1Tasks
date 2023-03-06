@@ -32,7 +32,7 @@ public class Main {
 
     public static long pellNumbers(int n) {
         int result = n;
-        for (int i = 1, a = 0, b = 1; i < n; i ++) {
+        for (int i = 2, a = 1, b = 2; i < n; i ++) {
             result = 2 * b + a;
             a = b;
             b = result;
