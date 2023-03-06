@@ -31,7 +31,12 @@ public class Main {
 
 
     public static long pellNumbers(int n) {
-        return Math.round((Math.pow((1 + Math.sqrt(2)), n) - Math.pow((1 - Math.sqrt(2)), n)) / (2 * Math.sqrt(2)));
+        int result = 0;
+        for (int i = 1, a = 0, b = 1; i < n; i ++) {
+            result = 2 * b + a;
+            a = b;
+            b = result;
+        } return result;
     }
 
     public static void printMultiplicationTable() {
