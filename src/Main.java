@@ -8,7 +8,7 @@ public class Main {
             printCharRectangle(scanner.nextInt(), scanner.nextInt(), validateCharToString(scanner.next()));
 
             System.out.println("\nChoose the sequence number for Pell numbers: ");
-            System.out.println(pellNumbers(scanner.nextInt(), 0, 1));
+            System.out.println(pellNumbers(scanner.nextInt()));
 
             System.out.println("\nMultiplication Table:");
             printMultiplicationTable();
@@ -30,9 +30,8 @@ public class Main {
     }
 
 
-    public static long pellNumbers(int n, long a, long b) {
-        if (n == 0) return a;
-        else return pellNumbers(--n, b, a + 2 * b);
+    public static long pellNumbers(int n) {
+        return Math.round((Math.pow((1 + Math.sqrt(2)), n) - Math.pow((1 - Math.sqrt(2)), n)) / (2 * Math.sqrt(2)));
     }
 
     public static void printMultiplicationTable() {
