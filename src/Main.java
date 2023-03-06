@@ -31,7 +31,7 @@ public class Main {
 
 
     public static long pellNumbers(int n) {
-        int result = 0;
+        int result = n;
         for (int i = 1, a = 0, b = 1; i < n; i ++) {
             result = 2 * b + a;
             a = b;
